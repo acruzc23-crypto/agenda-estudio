@@ -1,0 +1,17 @@
+{"task_id":"TASK-1","tool":"claim_work","status":"success","detail":null,"created_at":"2026-11-10T21:31:24.536Z"}
+{"task_id":"TASK-2","tool":"claim_work","status":"success","detail":"1 overlap(s)","created_at":"2026-11-10T21:31:25.431Z"}
+{"task_id":"TASK-2","tool":"update_task","status":"success","detail":"decision","created_at":"2026-11-10T21:31:34.201Z"}
+{"task_id":"TASK-1","tool":"update_task","status":"success","detail":"decision","created_at":"2026-11-10T21:31:53.408Z"}
+{"task_id":"TASK-1","tool":"update_task","status":"success","detail":"finding","created_at":"2026-11-10T21:33:03.004Z"}
+{"task_id":"TASK-1","tool":"handoff","status":"success","detail":"review_ready","created_at":"2026-11-10T21:33:04.597Z"}
+{"task_id":"TASK-1","tool":"review_ready","status":"success","detail":"0 open question(s)","created_at":"2026-11-10T21:33:04.600Z"}
+{"task_id":"TASK-2","tool":"update_task","status":"success","detail":"intent","created_at":"2026-11-10T21:33:15.286Z"}
+{"task_id":"TASK-2","tool":"update_task","status":"success","detail":"finding","created_at":"2026-11-10T21:35:24.932Z"}
+{"task_id":"TASK-2","tool":"handoff","status":"success","detail":"review_ready","created_at":"2026-11-10T21:35:25.747Z"}
+{"task_id":"TASK-2","tool":"review_ready","status":"success","detail":"0 open question(s)","created_at":"2026-11-10T21:35:25.751Z"}
+{"task_id":"TASK-3","tool":"claim_work","status":"success","detail":null,"created_at":"2026-11-10T21:35:26.552Z"}
+{"task_id":"TASK-3","tool":"offer_handoff","status":"success","detail":"handoff 3 to claude-code:backend","created_at":"2026-11-10T21:35:27.365Z"}
+{"task_id":"TASK-3","tool":"accept_handoff","status":"success","detail":"handoff 3 accepted","created_at":"2026-11-10T21:35:38.156Z"}
+{"task_id":"TASK-3","tool":"update_task","status":"success","detail":"finding","created_at":"2026-11-10T21:35:38.964Z"}
+{"task_id":"TASK-3","tool":"handoff","status":"success","detail":"complete","created_at":"2026-11-10T21:35:39.865Z"}
+{"task_id":"TASK-3","tool":"close_task","status":"success","detail":"3 -> 4","created_at":"2026-11-10T21:35:39.867Z"}

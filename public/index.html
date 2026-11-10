@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda de Estudio</title>
+  <meta name="description" content="Tus tareas de la universidad, ordenadas por fecha de entrega.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="hoja">
+    <header class="encabezado">
+      <h1>Agenda de estudio</h1>
+      <p class="resumen" id="resumen" aria-live="polite">Cargando tus tareas…</p>
+    </header>
+
+    <form id="formulario" class="nueva" autocomplete="off">
+      <h2 class="visualmente-oculto">Nueva tarea</h2>
+      <div class="campo campo-titulo">
+        <label for="titulo">Qué tienes que hacer</label>
+        <input id="titulo" name="titulo" required maxlength="120" placeholder="Ej.: Ejercicios de pilas y colas">
+      </div>
+      <div class="campo">
+        <label for="materia">Materia</label>
+        <input id="materia" name="materia" required maxlength="60" list="materias" placeholder="Estructura de Datos">
+        <datalist id="materias"></datalist>
+      </div>
+      <div class="campo">
+        <label for="entrega">Entrega</label>
+        <input id="entrega" name="entrega" type="date">
+      </div>
+      <button type="submit" class="boton">Anotar tarea</button>
+      <p class="error" id="error" role="alert" hidden></p>
+    </form>
+
+    <nav class="filtros" aria-label="Filtrar tareas">
+      <button type="button" data-filtro="pendientes" aria-pressed="true">Pendientes</button>
+      <button type="button" data-filtro="hechas" aria-pressed="false">Hechas</button>
+      <button type="button" data-filtro="todas" aria-pressed="false">Todas</button>
+    </nav>
+
+    <ol class="lista" id="lista" aria-label="Tareas"></ol>
+    <p class="vacio" id="vacio" hidden></p>
+  </main>
+
+  <template id="plantilla-tarea">
+    <li class="tarea">
+      <time class="fecha"></time>
+      <label class="marca">
+        <input type="checkbox">
+        <span class="texto">
+          <span class="titulo"></span>
+          <span class="materia"></span>
+        </span>
+      </label>
+      <button type="button" class="borrar">Borrar</button>
+    </li>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

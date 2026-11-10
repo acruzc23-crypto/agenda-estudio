@@ -1,0 +1,16 @@
+{
+  "name": "agenda-estudio",
+  "version": "1.0.0",
+  "description": "Agenda de tareas universitarias construida por dos agentes de IA coordinados con Concord MCP",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Alfredo Cruz",
+  "license": "MIT"
+}
