@@ -10,11 +10,20 @@ One agent built the REST API and the other built the web interface. Concord let 
 
 ## What the app does
 
+It looks like a page from a spiral graph-paper notebook, the kind most students in Ecuador carry to class.
+
 - Add an assignment with its subject and due date.
-- Tasks are sorted by due date. The date sits in the notebook's red margin.
-- Mark tasks as done, delete them, and filter by pending / done / all.
-- Overdue tasks are highlighted.
+- Tasks are sorted by due date. The date is written in the red margin, with how many days are left.
+- Each subject gets its own pen color, and you can filter by subject.
+- A week strip shows which days have deliveries.
+- Progress is drawn as a pencil line.
+- Overdue tasks are highlighted, and tasks due today or tomorrow get a red "!".
+- Ticking a task crosses it out and stamps it "¡Listo!".
 - Light and dark mode, works on phones.
+
+| Dark mode | Phone |
+| --- | --- |
+| ![Dark mode](docs/captura-oscuro.png) | ![Phone](docs/captura-movil.png) |
 
 No dependencies: only Node.js and plain HTML, CSS and JavaScript.
 
@@ -38,12 +47,14 @@ What happened, in order:
 4. **Each agent recorded what it found.** For example, the backend noticed that `fetch()` normalizes `..` in URLs, so the path-traversal test was not testing anything. It rewrote the test with `http.request`.
 5. **Both finished with `finish_work`** as `review_ready`, including changed files, tests, decisions, risks and guardrails.
 6. **Handoff:** the frontend opened TASK-3 (cross review) and offered it to the backend with `transfer_work`. The backend accepted it, reviewed `app.js` against the contract and closed it as `complete`.
+7. **Redesign:** after I asked for more personality, the frontend claimed TASK-4 for the same three files. Concord reported no overlap, and the agent closed the task with its evidence.
 
 The evidence Concord generated is in [`docs/concord/`](docs/concord/):
 
 - [`REVIEW_PACKET-TASK-1.md`](docs/concord/REVIEW_PACKET-TASK-1.md): backend review packet
 - [`REVIEW_PACKET-TASK-2.md`](docs/concord/REVIEW_PACKET-TASK-2.md): frontend review packet
 - [`HANDOFF-TASK-3.md`](docs/concord/HANDOFF-TASK-3.md): the handoff
+- [`HANDOFF-TASK-4.md`](docs/concord/HANDOFF-TASK-4.md): the redesign
 - [`events.jsonl`](docs/concord/events.jsonl): every Concord tool call in order
 
 ### Honest note
